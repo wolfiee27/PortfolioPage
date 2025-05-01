@@ -1,1 +1,57 @@
-<p>right-panel works!</p>
+<div class="container-fluid">
+
+  <!-- aboutme -->
+  <div class="about-me-container d-flex flex-row justify-content-center align-items-center ">
+    <div>
+      <h3 class="fs-1 fw-bolder">Gokul Ambalavanan</h3>
+      <p class="fs-5 fw-medium">A highly motivated software engineer with over 3.5 years of experience in developing web, mobile, and desktop applications. I hold a B.Tech in Computer Science and am a certified Professional Scrum Master and AWS Cloud Practitioner. My expertise lies in full-stack development using the MEAN stack and leveraging AWS cloud services for scalable solutions. Recognized for my innovative mindset, I have received the Global Innovation Award for Sustainability. Outside of work, I enjoy playing badminton and reading news.</p>
+      <button class="btn btn-primary btn-lg ">Download Resume</button>
+    </div>
+    <div>
+      <img src="assets/gif/codeing.gif" height="300px">
+    </div>
+  </div>
+
+
+  <!-- Skills -->
+  <div class="p-3 mt-3">
+     <h4 class="mb-2 fw-bolder fs-3">Skills</h4>
+     <p-carousel [value]="skillList" [numVisible]="5" [numScroll]="3" [circular]="true" autoplayInterval="3000">
+       <ng-template let-skill #item>
+         <div class="skillcard" >
+           <img src="assets/images/skills/{{skill.iconName}}.png"  height="100px" width="100px"  >
+           <h5 class="card-title mt-2">{{skill.title}}</h5>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+  </div>
+
+  <!-- Jobs -->
+  <div class="jobs-container">
+    <h6>
+      Schneider Electric,
+      I have made significant contributions to various projects and initiatives,
+      driving efficiency, innovation, and quality improvements. My role has involved leading key projects,
+      collaborating with stakeholders, and implementing cutting-edge technologies to achieve organizational
+      goals.
+    </h6>
+    <h6>Projects</h6>
+    <p-timeline [value]="projectList" class="w-full md:w-80 mt-4" [align]="'left'" [layout]="'vertical'">
+      <ng-template let-project #opposite>
+        <h4>{{project.projectName}}</h4>
+      </ng-template>
+
+      <ng-template #content let-project>
+        <!-- <div class="projects">
+          <ul class="list">
+            @for (activity of project.activity; track $index) {
+              <li class="list_item">{{activity}}</li>
+            }
+          </ul>
+        </div> -->
+
+      </ng-template>
+  </p-timeline>
+
+  </div>

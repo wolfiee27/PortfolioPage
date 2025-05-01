@@ -1,7 +1,7 @@
 
 
 <div class="video-background">
-  <video autoplay loop muted>
+  <video [autoplay]="true" [loop]="true" [muted]="true">
     <source src="/assets/videos/background.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
@@ -28,13 +28,11 @@
         gokul
       </div>
       <!-- main section -->
-      <div class="leftpanel">
-        <app-left-panel>
-
-        </app-left-panel>
+      <div class="leftpanel p-2">
+        <app-left-panel></app-left-panel>
       </div>
-      <div class="rightpanel p-2">
-        Main Panel
+      <div class="rightpanel p-3">
+        <app-right-panel></app-right-panel>
       </div>
     </div>
   </div>

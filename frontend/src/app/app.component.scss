@@ -7,20 +7,8 @@
   color: #fff;
 }
 
-// background: linear-gradient(45deg, #ff9add, #f8c3b4, #fcb4e8, #966ef1);
-// background-size: 400% 400%;
-// animation: gradientAnimation 3s ease infinite;
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+
+
 
 @keyframes float {
   0% {
@@ -74,13 +62,13 @@
 .tablet {
   grid-template-areas: "headerleft headerright"
                         "leftpanel rightpanel" ;
-  grid-template-columns: 20% 85%;
+  grid-template-columns: 15% 85%;
   grid-template-rows: 10% 90%;
   grid-row-gap: 0px;
   grid-column-gap:0px ;
   display: grid;
   height: 95%;
-  width: 80%;
+  width: 85% ;
   border-radius: 30px;
   background-color: rgba(58, 50, 50, 0.4);
   backdrop-filter: blur(30px);
@@ -88,10 +76,10 @@
 
 
 .headerleft, .leftpanel {
-  border-right: 1px solid rgba(60, 61, 68, 0.4);
+  border-right: 3px solid rgba(98, 97, 97, 0.4);
 }
 .headerleft, .headerright {
-  border-bottom: 1px solid rgba(82, 83, 85, 0.4);
+  border-bottom: 3px solid rgba(98, 97, 97, 0.4);
 }
 
 .circle-container {
@@ -99,7 +87,7 @@
   justify-content:space-between;
   align-items: center;
   height: 100%;
-  width: 60%;
+  width: 40%;
 }
 
 .headerleft {
@@ -112,8 +100,8 @@
 }
 
 .circle {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.2rem;
+  width: 1.2rem;
   border-radius:1rem;
   display: flex;
   justify-content: center;
@@ -165,4 +153,15 @@ body {
   position: relative;
   z-index: 1;
   color: white; /* Adjust as needed */
+}
+
+.rightpanel {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-color: #888 #333; /* Change the colors as needed */
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: #333; /* Change the background color of the scrollbar */
+  }
 }
