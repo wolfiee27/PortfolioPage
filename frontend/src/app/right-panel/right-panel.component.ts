@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { TimelineModule } from 'primeng/timeline';
+import { saveAs } from 'file-saver';
 @Component({
   selector: 'app-right-panel',
   imports: [CarouselModule, TimelineModule],
@@ -8,7 +10,7 @@ import { TimelineModule } from 'primeng/timeline';
   styleUrl: './right-panel.component.scss'
 })
 export class RightPanelComponent {
-
+  constructor(private http: HttpClient){}
   skillList: {iconName:string , title: string}[] = [
     {iconName:'typescript', title:'TypeScript'},
     {iconName:'nodejs', title:'NodeJs'},
@@ -61,6 +63,29 @@ export class RightPanelComponent {
   ]
 
 
+  achivementsList: {title: string, description: string}[] = [
+    {
+      title: 'Global Innovation Award for Sustainability',
+      description: 'Proposed and developed an AI model that monitors PEM Electrolyzer operations in real-time. Optimized parameters to maintain efficiency and extend the lifespan of electrolyzers. Supported sustainable hydrogen production, advancing cleaner energy initiatives.'
+    },
+    {
+      title: 'Ideation Campaign',
+      description: 'Successfully implemented an innovative solution as the Tech Lead. Developed a desktop application using WPF and C# for dynamic document merging. reduction in man-hours and marked improvements in documentation quality '
+    }
+  ]
+
+
+  downloadPDF() {
+  const url = `assets/document/resume.pdf`;
+  this.http.get(url, { responseType: 'blob' }).subscribe(blob => {
+  saveAs(blob, 'Gokul_Resume.pdf');
+  });
+  }
+
+
+
+
+
 }
 
 // Global Innovation Award for Sustainability:
@@ -72,4 +97,4 @@ export class RightPanelComponent {
 
 // Successfully implemented an innovative solution as the Tech Lead.
 // Developed a desktop application using WPF and C# for dynamic document merging.
-// Achieved an 80% reduction in man-hours and marked improvements in documentation quality.
+// Achieved an 80% reduction in man-hours and marked improvements in documentation quality
