@@ -32,32 +32,6 @@
   }
 }
 
-// .tablet {
-//   height: 80%;
-//   width: 80%;
-//   margin: 10%;
-//   border-radius: 10px;
-//   background-color: rgba(60, 61, 68, 0.4);
-//   backdrop-filter: blur(10px);
-//   &__header{
-//     height: 12%;
-//     border-bottom: 1px solid rgba(60, 61, 68, 0.4);
-//   }
-//   &__maincontent{
-//     margin-top: 8px;
-//     height: 88%;
-//     &__leftpanel{
-//       height: 100%;
-//       width: 15%;
-//       border-right: 1px solid rgba(60, 61, 68, 0.4);
-//     }
-//     &__rightpanel{
-//       height: 100%;
-//       width: 85%;
-//       margin-left:20px;
-//     }
-//   }
-// }
 
 .tablet {
   grid-template-areas: "headerleft headerright"

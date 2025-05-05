@@ -22,8 +22,8 @@ export class LeftPanelComponent {
   [
     { iconName: "linkedin", name:"LinkedIn", data:"https://www.linkedin.com/in/gokul-ambalavanan-338a99155/"  },
     { iconName: "github", name:"GitHub", data:"https://github.com/wolfiee27"},
-    { iconName: "phone", name:"Phone", data:""},
-    { iconName: "mail", name:"Email", data:""},
+    { iconName: "phone", name:"Phone", data:"8939589721"},
+    { iconName: "mail", name:"Email", data:"vannangokul@gmail.com"},
   ]
 
   socialClickHandler(input: {iconName: string, name: string, data:string}){
@@ -37,6 +37,5 @@ export class LeftPanelComponent {
       window.open("mailto:" + input.data)
     }
   }
-
 }
 
