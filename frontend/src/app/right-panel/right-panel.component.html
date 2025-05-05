@@ -1,14 +1,14 @@
 <div class="container-fluid">
 
   <!-- aboutme -->
-  <div id="About" class="about-me-container d-flex flex-row justify-content-center align-items-center ">
+  <div id="About" class="about-me-container">
     <div>
       <h3 class="fs-2 fw-bolder">Gokul Ambalavanan</h3>
       <p class="fs-6 fw-semibold">A highly motivated software engineer with over 3.5 years of experience in developing web, mobile, and desktop applications. I hold a B.Tech in Computer Science and am a certified Professional Scrum Master and AWS Cloud Practitioner. My expertise lies in full-stack development using the MEAN stack and leveraging AWS cloud services for scalable solutions. Recognized for my innovative mindset, I have received the Global Innovation Award for Sustainability. Outside of work, I enjoy playing badminton and reading news.</p>
       <button class="btn btn-primary btn-lg " (click)="downloadPDF()">Download Resume</button>
     </div>
     <div>
-      <img src="assets/gif/codeing.gif" height="250px" class="rounded-3" >
+      <img src="assets/gif/codeing.gif" class="rounded-3 image" >
     </div>
   </div>
 
@@ -28,12 +28,9 @@
   </div>
 
   <!-- Projects -->
-  <div id="Projects" class="projectcard mt-5 p-5">
-    <div class="hstack justify-content-between align-items-center">
+  <div id="Projects" class="projectcard mt-5">
+    <div class="__titleContainer">
       <div>
-        <h1 class="fs-3">
-          Schneider Electric
-        </h1>
 
         <h2 class="fs-6">
           Full Stack Developer
@@ -43,21 +40,21 @@
         </h2>
       </div>
       <div>
-        <img src="assets/images/schneider.png"  height="100px">
+        <img src="assets/images/schneider.png"  class="__image">
       </div>
     </div>
-    <h6 class="mt-1" style="text-align: justify;">
+    <h6 class="description" style="text-align: justify;">
       I have made significant contributions to various projects and initiatives, driving efficiency, innovation, and quality improvements. My role has involved leading key projects, collaborating with stakeholders, and implementing cutting-edge technologies to achieve organizational goals.
     </h6>
 
     <!-- Projects -->
     <div class="jobs-container pt-5">
-      <p-timeline [value]="projectList" class="w-full md:w-80 mt-4 w-75" [align]="'left'" [layout]="'vertical'">
-        <ng-template let-project #opposite>
-          <h4>{{project.projectName}}</h4>
+      <p-timeline [value]="projectList" styleClass="w-75" [align]="'left'" [layout]="'vertical'">
+        <ng-template pTemplate="marker" let-project>
+          <i class="pi pi-briefcase"></i>
         </ng-template>
-
         <ng-template #content let-project>
+          <h4>{{project.projectName}}</h4>
           <div class="projects">
             <ul class="list">
               @for (activity of project.activity; track $index) {
@@ -77,9 +74,9 @@
     Achivements:
     <img src="" alt="">
   </h1>
-  <div id="Achivements" class="hstack justify-content-between align-items-center container">
+  <div id="Achivements" class="achivements">
     @for (achivement of achivementsList; track $index) {
-      <div class="achivement-card">
+      <div class="achivements__card">
         <div>
           <h5 class="fw-bold">{{achivement.title}}</h5>
         </div>
@@ -94,8 +91,8 @@
     <h1 class="fs-3 mt-4">
       Education:
     </h1>
-    <div id="Education" class="hstack justify-content-between align-items-center px-5 eduactionCard ">
-      <div>
+    <div id="Education" class="education">
+      <div class="education__textContainer">
 
         <h2 class="fs-6">
           Dr.MGR Universtiy , Chennai

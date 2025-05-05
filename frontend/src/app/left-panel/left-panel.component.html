@@ -1,27 +1,27 @@
 
 
-<div class=" mt-2 d-flex flex-column justify-content-center align-items-start">
-  <div class="mt-4 text-center mb-1">
-    <ul class="pt-1">
+<div class="">
+  <div class="categories">
+    <ul class="categories__container">
       @for (item of categoriesList; track $index) {
-        <li class="category-item">
-          <a [href]="item.url"  class="category-link" >
+        <li class="categories__item">
+          <a [href]="item.url"  class="categories__link" >
             <img [src]="`assets/images/${item.iconName}.png`" class="categories__image" alt="close">
             <!-- <img [src]="item.iconUrl" class="category-image"/> -->
-            <span class="category_name" > {{ item.name }} </span>
+            <span class="categories__name" > {{ item.name }} </span>
           </a>
         </li>
       }
     </ul>
   </div>
-  <div class=" text-center ">
+  <div class="socialMedia">
     <!-- <h1 class="categories_title">Social Links</h1> -->
-    <ul class="">
+    <ul class="socialMedia__container">
       @for (item of SocialLinks; track $index) {
-        <li class="category-item">
-          <a  class="category-link" (click)="socialClickHandler(item)">
+        <li class="socialMedia__item">
+          <a  class="socialMedia__link" (click)="socialClickHandler(item)">
             <img [src]="`assets/images/${item.iconName}.png`" class="socialLink__image" alt="close">
-            <span class="category_name" > {{ item.name }} </span>
+            <span class="socialMedia__name" > {{ item.name }} </span>
           </a>
         </li>
       }

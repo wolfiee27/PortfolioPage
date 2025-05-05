@@ -5,7 +5,7 @@ import { TimelineModule } from 'primeng/timeline';
 import { saveAs } from 'file-saver';
 @Component({
   selector: 'app-right-panel',
-  imports: [CarouselModule, TimelineModule],
+  imports: [CarouselModule, TimelineModule,],
   templateUrl: './right-panel.component.html',
   styleUrl: './right-panel.component.scss'
 })

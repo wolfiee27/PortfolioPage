@@ -82,16 +82,44 @@
   border-bottom: 3px solid rgba(98, 97, 97, 0.4);
 }
 
+
+
 .circle-container {
   display: flex;
   justify-content:space-between;
   align-items: center;
   height: 100%;
   width: 60%;
+    //mobile screen
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
 }
 
 .headerleft {
+  padding: 0px 20px;
+  margin-left: 20px;
+
+  //mobile screen
+  @media screen and (max-width: 768px) {
+      padding: 0px;
+      margin-left: 0px;
+  }
+
   &:hover  {
+    .circle__image {
+      visibility: visible;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+  }
+}
+
+.headerright{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 20px;
+  &:hover {
     .circle__image {
       visibility: visible;
       animation: fadeIn 0.3s ease-in-out;
@@ -110,6 +138,12 @@
     visibility: hidden;
     height: .7rem;
     width: .7rem;
+  }
+
+  &__profilePhoto{
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid white;
   }
 }
 
